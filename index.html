@@ -278,7 +278,13 @@ tbody td{padding:.8rem 1rem;font-size:.83rem}
   #pg-app .tp-d{max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:.3rem .6rem;font-size:.68rem}
   #pg-app .content{padding:.75rem}
   #pg-app .card{padding:1rem;border-radius:12px}
-  #pg-app .gr2,#pg-app .gr3{grid-template-columns:1fr}
+  #pg-app .sg,#pg-app .bg,#pg-app .gr2,#pg-app .gr3{grid-template-columns:minmax(0,1fr)}
+  #pg-app .sc,#pg-app .bb,#pg-app .card{width:100%;min-width:0}
+  #pg-app .tw{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #pg-app table{min-width:620px}
+  #pg-app .sh{gap:.75rem;align-items:flex-start;flex-wrap:wrap}
+  #pg-app .fb{width:100%;align-items:stretch}
+  #pg-app .fi2{min-width:0;flex:1 1 140px}
   #toast{left:.75rem;right:.75rem;bottom:1rem;max-width:none}
 }
 @media print{body>*:not(#pg-app){display:none}.sidebar,.topbar,.macts{display:none!important}.ticket{border:2px solid #000}}
