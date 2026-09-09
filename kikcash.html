@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KikCash</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBEMUIyQSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQjJENDIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZFMDY2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZDIiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRDRBODAwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBCYWNrZ3JvdW5kIHJvdW5kZWQgc3F1YXJlIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiByeD0iNDQiIGZpbGw9InVybCgjYmcpIi8+CiAgPCEtLSBTdWJ0bGUgZ3JpZCBsaW5lcyAtLT4KICA8bGluZSB4MT0iMCIgeTE9IjEwMCIgeDI9IjIwMCIgeTI9IjEwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjIwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8IS0tIEsgbGV0dGVyIGJvbGQgLS0+CiAgPHRleHQgeD0iMzAiIHk9IjE0OCIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjEyMCIgZmlsbD0idXJsKCNnb2xkKSI+SzwvdGV4dD4KICA8IS0tIExpZ2h0bmluZyBib2x0IGFjY2VudCAtLT4KICA8cG9seWdvbiBwb2ludHM9IjEyOCw0MiAxMTIsOTUgMTI4LDk1IDExMCwxNTggMTQ4LDg4IDEyOCw4OCAxNDgsNDIiIGZpbGw9InVybCgjZ29sZDIpIiBvcGFjaXR5PSIwLjkyIi8+CiAgPCEtLSBCb3R0b20gZ2xvdyBkb3QgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTc4IiByPSI1IiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNzgiIHI9IjMuNSIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC4zNSIvPgogIDxjaXJjbGUgY3g9Ijg0IiBjeT0iMTc4IiByPSIzLjUiIGZpbGw9IiNGNUM1MTgiIG9wYWNpdHk9IjAuMzUiLz4KPC9zdmc+">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--y:#F5C518;--yl:#FFF8DC;--yg:linear-gradient(135deg,#F5C518,#FFE066);--navy:#0D1B2A;--navy2:#1B2D42;--bg:#F5F7FA;--bg2:#EEF1F6;--card:#FFF;--border:#E4E8F0;--border2:#D0D6E4;--text:#0D1B2A;--text2:#3A4560;--muted:#8891A8;--green:#059669;--red:#DC2626;--greenl:#ECFDF5;--redl:#FEF2F2;--shadow:0 1px 3px rgba(13,27,42,.08),0 4px 16px rgba(13,27,42,.04);--shadow2:0 8px 32px rgba(13,27,42,.12);--shadow3:0 20px 60px rgba(13,27,42,.16);--r:16px;--r2:12px;--r3:8px}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+#pg-login{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--card);position:relative}#pg-login::before{content:"";position:absolute;inset:0;background:url("data:image/jpeg;base64,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") center/cover no-repeat;z-index:0}#pg-login::after{content:"";position:absolute;inset:0;background:rgba(13,27,42,.55);z-index:0}
+.ll{background:transparent;display:flex;flex-direction:column;justify-content:center;padding:5rem;position:relative;overflow:hidden;z-index:1}.ll-bg{display:none}.ll>*{position:relative;z-index:1}
+.ll::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,197,24,.15),transparent 65%);pointer-events:none}
+.ll-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.25);border-radius:100px;padding:.35rem 1rem;font-size:.7rem;font-weight:700;color:var(--y);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2.5rem;width:fit-content}
+.ll-logo{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--y);letter-spacing:-.04em;line-height:1;margin-bottom:.8rem}
+.ll-sub{font-size:1rem;color:rgba(255,255,255,.45);margin-bottom:3rem;line-height:1.7}
+.ll-f{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem}
+.ll-i{width:36px;height:36px;border-radius:10px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.15);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ll-t{font-size:.85rem;color:rgba(255,255,255,.6)}
+.lr{display:flex;align-items:center;justify-content:center;padding:3rem 2rem;background:rgba(245,247,250,.96);backdrop-filter:blur(12px);position:relative;z-index:1}
+.lbox{width:100%;max-width:400px}
+.lb-t{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--text);margin-bottom:.3rem}
+.lb-s{color:var(--muted);font-size:.85rem;margin-bottom:2.5rem}
+.fl{display:block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.fin{width:100%;background:var(--card);border:1.5px solid var(--border);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;padding:.85rem 1.1rem;border-radius:var(--r2);outline:none;transition:all .2s;margin-bottom:1.2rem}
+.fin:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(245,197,24,.12)}
+.fin::placeholder{color:var(--muted)}
+.btn-login{width:100%;background:var(--navy);color:#FFF;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;padding:1rem;border:none;border-radius:var(--r2);cursor:pointer;transition:all .25s;box-shadow:0 4px 16px rgba(13,27,42,.25)}
+.btn-login:hover:not(:disabled){background:var(--navy2);transform:translateY(-1px)}
+.btn-login:disabled{opacity:.6;cursor:not-allowed}
+.lerr{background:var(--redl);border:1px solid rgba(220,38,38,.2);color:var(--red);border-radius:var(--r3);padding:.7rem 1rem;font-size:.82rem;margin-bottom:1.2rem;display:none}
+#pg-app{display:none;min-height:100vh}
+.shell{display:flex;min-height:100vh}
+.sidebar{width:248px;background:var(--navy);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:200}
+.sb-top{padding:1.6rem 1.4rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.sb-logo{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--y);display:flex;align-items:center;gap:.4rem}
+.sb-dot{width:8px;height:8px;border-radius:50%;background:var(--y);box-shadow:0 0 8px var(--y)}
+.sb-user{padding:1rem 1.4rem;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:.8rem;cursor:pointer;transition:background .15s}
+.sb-user:hover{background:rgba(255,255,255,.04)}
+.sb-av{width:36px;height:36px;border-radius:10px;background:var(--yg);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;color:var(--navy);font-size:.82rem;flex-shrink:0}
+.sb-nm{font-size:.85rem;font-weight:600;color:#FFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sb-rl{font-size:.63rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em}
+.sb-nav{flex:1;padding:.75rem 0;overflow-y:auto}
+.sb-sec{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.2);padding:.8rem 1.4rem .3rem;margin-top:.4rem}
+.sb-item{display:flex;align-items:center;gap:.75rem;padding:.7rem 1.4rem;cursor:pointer;color:rgba(255,255,255,.45);font-size:.84rem;font-weight:500;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;width:100%;text-align:left;border-left:2.5px solid transparent;transition:all .15s}
+.sb-item:hover{color:rgba(255,255,255,.85);background:rgba(255,255,255,.05)}
+.sb-item.active{color:var(--y);background:rgba(245,197,24,.08);border-left-color:var(--y)}
+.sb-item svg{width:15px;height:15px;flex-shrink:0}
+.sb-foot{padding:1rem 1.4rem;border-top:1px solid rgba(255,255,255,.07)}
+.btn-out{width:100%;background:transparent;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);padding:.6rem;border-radius:var(--r3);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:600;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-out:hover{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.2)}
+.main{margin-left:248px;flex:1;display:flex;flex-direction:column}
+.topbar{background:var(--card);border-bottom:1.5px solid var(--border);padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
+.tp-t{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800}
+.tp-d{font-size:.75rem;color:var(--muted);background:var(--bg2);padding:.3rem .9rem;border-radius:100px;border:1px solid var(--border)}
+.content{padding:2rem;flex:1}
+.card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow)}
+.card-t{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;margin-bottom:1.3rem}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem;margin-bottom:1.5rem}
+.sc{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--shadow);transition:all .2s}
+.sc:hover{border-color:var(--y);transform:translateY(-1px)}
+.sc-l{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.sc-v{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;line-height:1}
+.sc-s{font-size:.72rem;color:var(--muted);margin-top:.35rem}
+.bg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.bb{border-radius:var(--r);padding:1.6rem 1.8rem;position:relative;overflow:hidden;box-shadow:var(--shadow2)}
+.bb::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.08)}
+.bb.mc{background:linear-gradient(135deg,#8B0000,#C00010 50%,#E8000D)}
+.bb.nc{background:linear-gradient(135deg,#003080,#0050CC 50%,#2B7FFF)}
+.b-l{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.4rem}
+.b-a{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:#FFF;line-height:1}
+.b-c{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:.25rem}
+.b-b{position:absolute;top:1.2rem;right:1.4rem;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:rgba(255,255,255,.25)}
+.fg{display:flex;flex-direction:column;gap:.35rem}
+.flab{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fi,.fs{background:var(--bg);border:1.5px solid var(--border);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;padding:.75rem 1rem;border-radius:var(--r2);outline:none;transition:all .2s;width:100%}
+.fi:focus,.fs:focus{border-color:var(--y);background:var(--card);box-shadow:0 0 0 3px rgba(245,197,24,.1)}
+.fi::placeholder{color:var(--muted)}
+.gr2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:.85rem}
+.gr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem;margin-bottom:.85rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.65rem 1.3rem;border-radius:var(--r2);font-family:'Plus Jakarta Sans',sans-serif;font-size:.84rem;font-weight:600;cursor:pointer;border:none;transition:all .2s}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn-y{background:var(--yg);color:var(--navy)}.btn-y:hover:not(:disabled){transform:translateY(-1px)}
+.btn-n{background:var(--navy);color:#FFF}.btn-n:hover:not(:disabled){background:var(--navy2);transform:translateY(-1px)}
+.btn-r{background:var(--redl);color:var(--red);border:1.5px solid rgba(220,38,38,.15)}
+.btn-h{background:var(--bg2);color:var(--text2);border:1.5px solid var(--border)}
+.btn-sm{padding:.4rem .85rem;font-size:.76rem;border-radius:var(--r3)}
+.btn-fw{width:100%}
+.tw{border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--border)}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--navy)}
+thead th{padding:.85rem 1rem;text-align:left;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border);background:var(--card);transition:background .12s}
+tbody tr:hover{background:var(--bg)}
+tbody tr:last-child{border-bottom:none}
+tbody td{padding:.8rem 1rem;font-size:.83rem}
+.badge{display:inline-flex;align-items:center;padding:.2rem .65rem;border-radius:100px;font-size:.65rem;font-weight:700}
+.bmc{background:#FFF0F0;color:#C00010;border:1px solid #FFD0D0}.bnc{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.bdep{background:#ECFDF5;color:#065F46;border:1px solid #A7F3D0}.bret{background:#FFFBEB;color:#92400E;border:1px solid #FDE68A}
+.badm{background:#FFFBEB;color:#92400E;border:1px solid #FDE68A}.busr{background:var(--bg2);color:var(--muted);border:1px solid var(--border)}
+#toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:var(--navy);color:#FFF;border-radius:var(--r2);padding:.9rem 1.4rem;font-size:.84rem;font-weight:500;box-shadow:var(--shadow3);transform:translateY(20px);opacity:0;transition:all .3s cubic-bezier(.4,0,.2,1);pointer-events:none;max-width:320px;display:flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1)}
+#toast.show{transform:translateY(0);opacity:1}
+#toast.success{border-left:3px solid var(--green)}#toast.error{border-left:3px solid var(--red)}#toast.info{border-left:3px solid var(--y)}
+.mo{position:fixed;inset:0;background:rgba(13,27,42,.5);z-index:500;display:none;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(8px)}
+.mo.open{display:flex}
+.mbox{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:2rem;width:100%;max-width:480px;box-shadow:var(--shadow3);animation:mIn .25s cubic-bezier(.4,0,.2,1)}
+@keyframes mIn{from{transform:translateY(16px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.mtit{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:1.3rem}
+.macts{display:flex;gap:.75rem;margin-top:1.5rem}
+.ticket{background:var(--bg);border:1.5px dashed var(--border2);border-radius:var(--r2);padding:1.4rem}
+.tk-h{text-align:center;padding-bottom:1rem;margin-bottom:1rem;border-bottom:1.5px dashed var(--border2)}
+.tk-logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--navy)}
+.tk-dt{font-size:.7rem;color:var(--muted);margin-top:.2rem}
+.tk-r{display:flex;justify-content:space-between;padding:.38rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.tk-k{color:var(--muted);font-weight:500}.tk-v{font-weight:700}
+.tk-tot{background:var(--yl);border:1.5px solid rgba(245,197,24,.3);border-radius:var(--r3);padding:.7rem 1rem;margin-top:.6rem;display:flex;justify-content:space-between;align-items:center}
+.tk-tv{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--navy)}
+.fp{background:#FFFBEB;border:1.5px solid rgba(245,197,24,.25);border-radius:var(--r2);padding:.9rem 1rem;margin-top:.75rem;display:none}
+.fp-r{display:flex;justify-content:space-between;font-size:.8rem;padding:.2rem 0;color:var(--text2)}
+.fp-t{display:flex;justify-content:space-between;font-size:.88rem;font-weight:700;color:var(--navy);margin-top:.4rem;padding-top:.4rem;border-top:1px solid rgba(245,197,24,.3)}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
+.st{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800}
+.fb{display:flex;gap:.65rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center}
+.fi2{background:var(--card);border:1.5px solid var(--border);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.81rem;padding:.5rem .85rem;border-radius:var(--r3);outline:none;transition:border-color .2s}
+.fi2:focus{border-color:var(--y)}
+.pag{display:flex;gap:.4rem;justify-content:flex-end;margin-top:1rem}
+.pb{min-width:32px;height:32px;border-radius:var(--r3);border:1.5px solid var(--border);background:var(--card);color:var(--text2);font-size:.77rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.pb:hover,.pb.active{background:var(--navy);color:#FFF;border-color:var(--navy)}
+.sub-box{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.4rem;margin-bottom:1.4rem}
+.sub-t{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:800;margin-bottom:1rem}
+.es{text-align:center;padding:3rem;color:var(--muted);font-size:.84rem}
+.ei{font-size:2.5rem;margin-bottom:.6rem;opacity:.5}
+.fade-in{animation:fIn .3s ease}
+@keyframes fIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ai{background:#EFF6FF;border:1px solid #BFDBFE;color:#1D4ED8;padding:.8rem 1rem;border-radius:var(--r3);font-size:.83rem;margin-bottom:1rem}
+.ubr{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1rem;background:var(--card);border:1.5px solid var(--border);border-radius:var(--r2);margin-bottom:.6rem;transition:all .15s}
+.ubr:hover{border-color:var(--y)}
+.ubi{display:flex;align-items:center;gap:.75rem}
+.ubav{width:34px;height:34px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;color:var(--y);font-size:.78rem;flex-shrink:0}
+.ubn{font-weight:700;font-size:.88rem}.ubu{font-size:.72rem;color:var(--muted)}
+.ubb{display:flex;gap:.6rem;align-items:center}
+.ch{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:.2rem .6rem;font-size:.75rem;font-weight:700}
+.ch.mc{background:#FFF0F0;border-color:#FFD0D0;color:#C00010}.ch.nc{background:#EFF6FF;border-color:#BFDBFE;color:#1D4ED8}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#FFF;border-radius:50%;animation:sp .6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.mob-menu-btn{display:none;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;background:var(--bg2);border:1.5px solid var(--border);cursor:pointer;flex-shrink:0;z-index:300}
+.mob-menu-btn span{display:block;width:16px;height:2px;background:var(--text);border-radius:2px;transition:all .2s;position:relative}
+.mob-menu-btn span::before,.mob-menu-btn span::after{content:'';position:absolute;width:16px;height:2px;background:var(--text);border-radius:2px;transition:all .2s}
+.mob-menu-btn span::before{top:-5px}
+.mob-menu-btn span::after{top:5px}
+.mob-overlay{position:fixed;inset:0;background:rgba(13,27,42,.5);z-index:199;display:none;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(2px)}
+.sidebar{transition:transform .3s cubic-bezier(.4,0,.2,1)}
+@media(max-width:900px){
+#pg-login{grid-template-columns:1fr;align-items:center;justify-items:center;padding:2rem 1.2rem}
+.ll{display:none}
+.lr{background:rgba(255,255,255,.97);border-radius:24px;box-shadow:0 24px 64px rgba(13,27,42,.35);padding:2.5rem 2rem;max-width:420px;width:100%;backdrop-filter:blur(20px)}
+.sidebar{transform:translateX(-100%);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.sidebar.open{transform:translateX(0)}
+.main{margin-left:0}
+.gr2,.gr3{grid-template-columns:1fr}
+.bg{grid-template-columns:1fr}
+.topbar{padding:.75rem 1rem}
+.content{padding:1rem}
+.mob-menu-btn{display:flex!important}
+.mob-overlay{display:block!important}
+.mob-overlay.open{opacity:1;pointer-events:auto}
+}
+
+/* NOTIFICATIONS */
+.notif-badge{position:absolute;top:-4px;right:-4px;background:#E8000D;color:#fff;border-radius:100px;font-size:.58rem;font-weight:800;min-width:16px;height:16px;display:flex;align-items:center;justify-content:center;padding:0 4px;border:2px solid var(--navy);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.sb-item-wrap{position:relative;display:flex;width:100%}
+.msg-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.1rem 1.2rem;margin-bottom:.75rem;transition:all .2s;cursor:pointer}
+.msg-card:hover{border-color:var(--y);transform:translateY(-1px);box-shadow:var(--shadow)}
+.msg-card.unread{border-left:3px solid var(--y);background:linear-gradient(135deg,#FFFDF0,var(--card))}
+.msg-card.unread .msg-title{font-weight:700}
+.msg-title{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
+.msg-body{font-size:.82rem;color:var(--text2);line-height:1.5}
+.msg-meta{display:flex;align-items:center;justify-content:space-between;margin-top:.5rem}
+.msg-from{font-size:.68rem;color:var(--muted);font-weight:600}
+.msg-date{font-size:.65rem;color:var(--muted)}
+.msg-dot{width:8px;height:8px;border-radius:50%;background:var(--y);flex-shrink:0}
+.compose-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:var(--r);padding:1.6rem;margin-bottom:1.5rem;border:none}
+.compose-t{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:#fff;margin-bottom:1.2rem}
+.compose-box .fi,.compose-box .fs,.compose-box textarea{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.12);color:#fff}
+.compose-box .fi::placeholder,.compose-box textarea::placeholder{color:rgba(255,255,255,.35)}
+.compose-box .fi:focus,.compose-box .fs:focus,.compose-box textarea:focus{border-color:var(--y);background:rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(245,197,24,.15)}
+.compose-box .flab{color:rgba(255,255,255,.5)}
+.compose-box select option{background:var(--navy);color:#fff}
+.msg-empty{text-align:center;padding:3rem;color:var(--muted)}
+.notif-count-pill{background:rgba(232,0,13,.15);border:1px solid rgba(232,0,13,.25);color:#E8000D;border-radius:100px;padding:.15rem .55rem;font-size:.62rem;font-weight:800;margin-left:.4rem}
+
+/* Login refresh */
+#pg-login{grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);background:#fff9df;overflow:hidden}
+#pg-login::before{background:radial-gradient(circle at 15% 20%,rgba(245,197,24,.2),transparent 30%),linear-gradient(120deg,rgba(255,255,255,.5),transparent 55%);pointer-events:none}
+#pg-login .ll{background:linear-gradient(145deg,#081722 0%,#0d2534 58%,#12394a 100%);padding:clamp(2.5rem,7vw,6rem);isolation:isolate}
+#pg-login .ll::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(135deg,#000,transparent 75%)}
+#pg-login .ll::before{content:"";position:absolute;width:440px;height:440px;right:-220px;bottom:-240px;border:1px solid rgba(245,197,24,.25);border-radius:50%;box-shadow:0 0 0 36px rgba(245,197,24,.04),0 0 0 72px rgba(245,197,24,.03)}
+#pg-login .ll-pill{background:rgba(245,197,24,.1);border-color:rgba(245,197,24,.3);color:#ffe47a;margin-bottom:2.1rem}
+#pg-login .ll-logo{font-size:clamp(3rem,5vw,4.4rem);letter-spacing:-.06em;text-shadow:0 10px 30px rgba(0,0,0,.2)}
+#pg-login .login-brand{display:block;object-fit:contain;mix-blend-mode:screen}
+#pg-login .login-brand-panel{width:min(260px,48vw);height:auto;margin:0 0 1.2rem -1rem}
+#pg-login .login-brand-form{display:none}
+#pg-login .ll>div:has(.ll-logo){display:none}
+#pg-login .ll-logo{display:none}
+#pg-login .ll>div>img[src^="data:image/svg+xml"]{display:none}
+#pg-app .sb-top>div>img{content:url('logo.png');display:block!important;width:150px!important;height:58px!important;max-width:150px!important;object-fit:contain!important;flex:0 0 150px;mix-blend-mode:screen}
+#pg-app .sb-top>div{min-width:0;overflow:hidden}
+#pg-app .sb-top .sb-logo{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:0;gap:0}
+#pg-app .sb-item{min-width:0;overflow:hidden;white-space:normal;overflow-wrap:anywhere}
+#pg-app .sb-item svg{flex:0 0 15px}
+#pg-app .sb-item-wrap{min-width:0}
+#pg-app .ticket-logo{display:block;width:92px;height:auto;max-height:64px;object-fit:contain;margin:0 auto .45rem;mix-blend-mode:multiply}
+#pg-app .tk-logo{width:110px;height:58px;margin:0 auto .45rem;background:url('logo.png') center/contain no-repeat;font-size:0}
+#pg-login .ll-sub{max-width:27rem;font-size:.95rem;color:rgba(255,255,255,.58);margin-bottom:2.4rem}
+#pg-login .ll-f{max-width:20rem;margin-bottom:.7rem;padding:.48rem .65rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.035)}
+#pg-login .ll-i{background:rgba(245,197,24,.12);border-color:rgba(245,197,24,.18)}
+#pg-login .lr{padding:clamp(2rem,6vw,5rem);background:#fffdf1;backdrop-filter:none}
+#pg-login .lbox{max-width:390px}
+#pg-login .lbox::before{content:"SECURE ACCESS";display:block;color:#9aa39b;font-size:.62rem;font-weight:800;letter-spacing:.2em;margin-bottom:1.15rem}
+#pg-login .lb-t{font-size:clamp(1.8rem,3vw,2.35rem);letter-spacing:-.04em;margin-bottom:.45rem}
+#pg-login .lb-s{max-width:19rem;line-height:1.65;margin-bottom:2rem}
+#pg-login .fl{color:#174b6a;letter-spacing:.08em}
+#pg-login .fin{background:#fff;border-color:#dce4dc;border-radius:10px;padding:.95rem 1rem;margin-bottom:1.1rem;box-shadow:0 2px 8px rgba(21,43,32,.03)}
+#pg-login .fin:focus{border-color:#e0b400;box-shadow:0 0 0 4px rgba(245,197,24,.18),0 5px 15px rgba(16,57,82,.08)}
+#pg-login .btn-login{background:#0d3b59;border-radius:10px;padding:1rem 1.1rem;margin-top:.25rem;box-shadow:0 10px 22px rgba(13,59,89,.2)}
+#pg-login .btn-login:hover:not(:disabled){background:#155779;transform:translateY(-2px);box-shadow:0 13px 25px rgba(13,59,89,.25)}
+#pg-login .lerr{border-radius:10px}
+@media(max-width:900px){#pg-login{background:linear-gradient(150deg,#0d3b59 0 32%,#fff9df 32%)}#pg-login .lr{border:1px solid rgba(245,197,24,.35);border-radius:20px;padding:2.25rem 1.65rem;box-shadow:0 20px 50px rgba(8,45,68,.25)}#pg-login .lbox::before{color:#174b6a}#pg-login .login-brand-form{display:block;width:min(175px,58vw);height:auto;margin:0 auto 1.1rem}}
+/* User workspace polish */
+#pg-app .main{background:linear-gradient(135deg,#f6f8fb 0%,#eef4f7 100%)}
+#pg-app .topbar{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom-color:rgba(19,67,91,.1)}
+#pg-app .content{max-width:1500px;width:100%;margin:0 auto}
+#pg-app .content>.fade-in{animation:workspaceIn .45s cubic-bezier(.2,.8,.2,1)}
+#pg-app .sb-item{border-left:3px solid transparent;border-radius:0 12px 12px 0;margin:2px 10px 2px 0;width:calc(100% - 10px);transition:color .2s,background .2s,border-color .2s,transform .2s}
+#pg-app .sb-item:hover{transform:translateX(3px);background:rgba(245,197,24,.08)}
+#pg-app .sb-item.active{background:linear-gradient(90deg,rgba(245,197,24,.18),rgba(245,197,24,.04));border-left-color:var(--y);color:#ffe066}
+#pg-app .sg{gap:1.15rem}
+#pg-app .sg .sc{position:relative;overflow:hidden;border:1px solid rgba(18,61,83,.1);border-top-width:3px!important;background:rgba(255,255,255,.9);box-shadow:0 8px 24px rgba(13,46,65,.06);animation:riseIn .45s both}
+#pg-app .sg .sc:nth-child(2){animation-delay:.06s}
+#pg-app .sg .sc:nth-child(3){animation-delay:.12s}
+#pg-app .sg .sc:nth-child(4){animation-delay:.18s}
+#pg-app .sg .sc::after{content:"";position:absolute;right:-24px;bottom:-34px;width:96px;height:96px;border:1px solid rgba(245,197,24,.25);border-radius:50%;transition:transform .35s}
+#pg-app .sg .sc:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(13,46,65,.12)}
+#pg-app .sg .sc:hover::after{transform:scale(1.2)}
+#pg-app .sc-l{color:#6c7b84}
+#pg-app .sc-s{color:#81909a}
+#pg-app .bg{gap:1.15rem}
+#pg-app .bg>div{min-height:180px;box-shadow:0 16px 30px rgba(13,46,65,.16)!important;transition:transform .3s,box-shadow .3s}
+#pg-app .bg>div:hover{transform:translateY(-4px);box-shadow:0 21px 38px rgba(13,46,65,.22)!important}
+#pg-app .card{border-color:rgba(18,61,83,.1);box-shadow:0 8px 24px rgba(13,46,65,.055);transition:box-shadow .25s,border-color .25s}
+#pg-app .card:hover{border-color:rgba(245,197,24,.35);box-shadow:0 12px 30px rgba(13,46,65,.09)}
+#pg-app .btn{transition:transform .2s,box-shadow .2s,background .2s}
+#pg-app .btn:hover:not(:disabled){box-shadow:0 7px 16px rgba(13,46,65,.12)}
+#pg-app tbody tr{transition:background .18s,transform .18s}
+#pg-app tbody tr:hover{transform:translateX(2px)}
+@keyframes workspaceIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:900px){#pg-app .content{padding:.9rem}#pg-app .sg{grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}#pg-app .sg .sc{padding:1rem}.sc-v{font-size:1.4rem!important}#pg-app .bg>div{min-height:150px;padding:1.25rem!important}}
+@media(max-width:520px){#pg-app .sc-l{font-size:.55rem;letter-spacing:.08em}#pg-app .sc-s{font-size:.65rem}#pg-app .bg>div{min-height:135px}.b-a{font-size:1.65rem}}
+@media print{body>*:not(#pg-app){display:none}.sidebar,.topbar,.macts{display:none!important}.ticket{border:2px solid #000}}
+</style>
+</head>
+<body>
+<div id="pg-login">
+  <div class="ll">
+    <img class="login-brand login-brand-panel" src="logo.png" alt="KikCash">
+    <div class="ll-bg"><img src="data:image/jpeg;base64,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" alt=""></div>
+    <div class="ll-pill"><span style="width:6px;height:6px;border-radius:50%;background:var(--y);display:inline-block"></span>Platfòm Mobil Ayiti</div>
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.8rem"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBEMUIyQSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQjJENDIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZFMDY2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZDIiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRDRBODAwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBCYWNrZ3JvdW5kIHJvdW5kZWQgc3F1YXJlIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiByeD0iNDQiIGZpbGw9InVybCgjYmcpIi8+CiAgPCEtLSBTdWJ0bGUgZ3JpZCBsaW5lcyAtLT4KICA8bGluZSB4MT0iMCIgeTE9IjEwMCIgeDI9IjIwMCIgeTI9IjEwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjIwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8IS0tIEsgbGV0dGVyIGJvbGQgLS0+CiAgPHRleHQgeD0iMzAiIHk9IjE0OCIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjEyMCIgZmlsbD0idXJsKCNnb2xkKSI+SzwvdGV4dD4KICA8IS0tIExpZ2h0bmluZyBib2x0IGFjY2VudCAtLT4KICA8cG9seWdvbiBwb2ludHM9IjEyOCw0MiAxMTIsOTUgMTI4LDk1IDExMCwxNTggMTQ4LDg4IDEyOCw4OCAxNDgsNDIiIGZpbGw9InVybCgjZ29sZDIpIiBvcGFjaXR5PSIwLjkyIi8+CiAgPCEtLSBCb3R0b20gZ2xvdyBkb3QgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTc4IiByPSI1IiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNzgiIHI9IjMuNSIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC4zNSIvPgogIDxjaXJjbGUgY3g9Ijg0IiBjeT0iMTc4IiByPSIzLjUiIGZpbGw9IiNGNUM1MTgiIG9wYWNpdHk9IjAuMzUiLz4KPC9zdmc+" style="width:56px;height:56px;border-radius:16px;flex-shrink:0"><div class="ll-logo" style="margin-bottom:0">KikCash</div></div>
+    <div class="ll-sub">Yon fason senp, rapid ak sekirize pou jere sèvis peman ou yo.</div>
+    <div class="ll-f"><div class="ll-i">💳</div><div class="ll-t">Peman MonCash &amp; NatCash</div></div>
+    <div class="ll-f"><div class="ll-i">⚡</div><div class="ll-t">Tranzaksyon rapid ak fasil</div></div>
+    <div class="ll-f"><div class="ll-i">🎫</div><div class="ll-t">Resi dijital pou chak operasyon</div></div>
+    <div class="ll-f"><div class="ll-i">🔒</div><div class="ll-t">Yon eksperyans serye ak pwoteje</div></div>
+  </div>
+  <div class="lr">
+    <div class="lbox">
+      <img class="login-brand login-brand-form" src="logo.png" alt="KikCash">
+      <div class="lb-t">Koneksyon</div>
+      <div class="lb-s">Antre enfòmasyon ou pou jwenn aksè</div>
+      <div id="lerr" class="lerr"></div>
+      <label class="fl">Non Itilizatè</label>
+      <input type="text" id="lu" class="fin" placeholder="Non itilizatè ou...">
+      <label class="fl">Modpas</label>
+      <input type="password" id="lp" class="fin" placeholder="••••••••">
+      <button class="btn-login" id="btnL" onclick="doLogin()">Konekte →</button>
+    </div>
+  </div>
+</div>
+<div id="pg-app">
+  <div class="mob-overlay" id="mobOvl" onclick="closeSidebar()"></div>
+<div class="shell">
+    <aside class="sidebar">
+      <div class="sb-top"><div style="display:flex;align-items:center;gap:.7rem"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBEMUIyQSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQjJENDIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZFMDY2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZDIiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRDRBODAwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QzUxOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBCYWNrZ3JvdW5kIHJvdW5kZWQgc3F1YXJlIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiByeD0iNDQiIGZpbGw9InVybCgjYmcpIi8+CiAgPCEtLSBTdWJ0bGUgZ3JpZCBsaW5lcyAtLT4KICA8bGluZSB4MT0iMCIgeTE9IjEwMCIgeDI9IjIwMCIgeTI9IjEwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjIwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8IS0tIEsgbGV0dGVyIGJvbGQgLS0+CiAgPHRleHQgeD0iMzAiIHk9IjE0OCIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjEyMCIgZmlsbD0idXJsKCNnb2xkKSI+SzwvdGV4dD4KICA8IS0tIExpZ2h0bmluZyBib2x0IGFjY2VudCAtLT4KICA8cG9seWdvbiBwb2ludHM9IjEyOCw0MiAxMTIsOTUgMTI4LDk1IDExMCwxNTggMTQ4LDg4IDEyOCw4OCAxNDgsNDIiIGZpbGw9InVybCgjZ29sZDIpIiBvcGFjaXR5PSIwLjkyIi8+CiAgPCEtLSBCb3R0b20gZ2xvdyBkb3QgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTc4IiByPSI1IiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNzgiIHI9IjMuNSIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC4zNSIvPgogIDxjaXJjbGUgY3g9Ijg0IiBjeT0iMTc4IiByPSIzLjUiIGZpbGw9IiNGNUM1MTgiIG9wYWNpdHk9IjAuMzUiLz4KPC9zdmc+" style="width:36px;height:36px;border-radius:10px;flex-shrink:0"><div class="sb-logo">KikCash <span class="sb-dot"></span></div></div></div>
+      <div class="sb-user" onclick="nav('profile')">
+        <div class="sb-av" id="sbav">?</div>
+        <div style="overflow:hidden"><div class="sb-nm" id="sbnm">—</div><div class="sb-rl" id="sbrl">—</div></div>
+        <svg style="margin-left:auto;flex-shrink:0;opacity:.3" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+      <nav class="sb-nav" id="sbnav"></nav>
+      <div class="sb-foot"><button class="btn-out" onclick="doLogout()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>Dekonekte</button></div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+  <div style="display:flex;align-items:center;gap:.8rem">
+    <button class="mob-menu-btn" id="mobBtn" onclick="toggleSidebar()" aria-label="Menu">
+      <span id="mobIco"></span>
+    </button>
+    <div class="tp-t" id="tpt">Dashboard</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:.75rem">
+    <button onclick="nav(CU.role==='superadmin'?'adm-msgs':'msgs')" style="position:relative;background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .2s" title="Notifikasyon">
+      🔔<span id="bell-badge" style="position:absolute;top:-4px;right:-4px;background:#E8000D;color:#fff;border-radius:100px;font-size:.55rem;font-weight:800;min-width:15px;height:15px;display:none;align-items:center;justify-content:center;padding:0 3px;border:2px solid var(--card)">0</span>
+    </button>
+    <div class="tp-d" id="tpd"></div>
+  </div>
+</header>
+      <main class="content" id="cnt"></main>
+    </div>
+  </div>
+</div>
+<div id="toast"></div><div id="mods"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL='https://lrimccgkajlrqcvzbpth.supabase.co';
+const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyaW1jY2drYWpscnFjdnpicHRoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5NzYwNzAsImV4cCI6MjEwNDU1MjA3MH0.0SGajjHjWr_zV7VGNoHVgpWoACjPDWnL7WklIZTc_yw';
+const SUPABASE_CLIENT=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}});
+const API='https://lrimccgkajlrqcvzbpth.supabase.co/functions/v1/api';
+async function rq(m,p,b){
+  const o={method:m,headers:{'Content-Type':'application/json'}};
+  const t=AUTH_TOKEN;
+  if(t)o.headers['Authorization']='Bearer '+t;
+  if(b)o.body=JSON.stringify(b);
+  try{const r=await fetch(API+p,o);return await r.json();}
+  catch{return{ok:false,msg:'Sèvè pa reponn. Verifye koneksyon ou.'};}
+}
+let CU=null,CP='',AUTH_TOKEN='';
+const fD=i=>{if(!i)return'—';const d=new Date(i);return d.toLocaleDateString('fr-HT',{day:'2-digit',month:'2-digit',year:'numeric'})+' '+d.toLocaleTimeString('fr-HT',{hour:'2-digit',minute:'2-digit'});};
+const fmt=n=>Number(n||0).toLocaleString('fr-HT');
+const ini=n=>(n||'?').split(' ').map(w=>w[0]).join('').toUpperCase().substr(0,2);
+const $=id=>document.getElementById(id);
+let TT;
+function toast(m,t='info'){const el=$('toast');el.className='';el.innerHTML=`<span style="color:${t==='success'?'var(--green)':t==='error'?'var(--red)':'var(--y)'}">${t==='success'?'✓':t==='error'?'✗':'●'}</span><span>${m}</span>`;el.classList.add('show',t);clearTimeout(TT);TT=setTimeout(()=>el.classList.remove('show'),3500);}
+async function doLogin(){
+  const u=$('lu').value.trim(),p=$('lp').value;
+  const er=$('lerr');er.style.display='none';
+  if(!u||!p){er.textContent='Antre non itilizatè ak modpas.';er.style.display='block';return;}
+  const b=$('btnL');b.disabled=true;b.innerHTML='<span class="spin"></span> Koneksyon...';
+  const d=await rq('POST','/auth/login',{username:u,password:p});
+  b.disabled=false;b.innerHTML='Konekte →';
+  if(!d.ok){er.textContent='❌ '+d.msg;er.style.display='block';return;}
+  AUTH_TOKEN=d.token;CU=d.user;
+  $('pg-login').style.display='none';$('pg-app').style.display='block';
+  bShell();nav('dashboard');
+}
+['lu','lp'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();}));
+function doLogout(){AUTH_TOKEN='';CU=null;$('pg-app').style.display='none';$('pg-login').style.display='grid';$('lu').value='';$('lp').value='';}
+function autoLogin(){}
+function bShell(){
+  rSb();const isA=CU.role==='superadmin';
+  const UP=[{id:'dashboard',l:'Dashboard',i:'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z'},{id:'transaction',l:'Nouvo Tranzaksyon',i:'M12 5v14M5 12h14'},{id:'journal',l:'Jounal Mwen',i:'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z'},{id:'profile',l:'Pwofil & Sekirite',i:'M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2'},{id:'msgs',l:'Notifikasyon',i:'M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z'}];
+  const AP=[{id:'adm-users',l:'Jere Itilizatè',i:'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2'},{id:'adm-bal',l:'Distribiye Kapital',i:'M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6'},{id:'adm-journal',l:'Tout Journal',i:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18'},{id:'adm-msgs',l:'Anons & Mesaj',i:'M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z'}];
+  const mk=p=>`<div class="sb-item-wrap"><button class="sb-item" data-id="${p.id}" onclick="nav('${p.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="${p.i}"/></svg>${p.l}</button>${(p.id==='msgs'||p.id==='adm-msgs')?'<span class="notif-badge" id="nb_'+p.id+'" style="display:none">0</span>':''}</div>`;
+  let h='<div class="sb-sec">Prensipal</div>'+UP.map(mk).join('');
+  if(isA)h+='<div class="sb-sec">Administrasyon</div>'+AP.map(mk).join('');
+  $('sbnav').innerHTML=h;
+  setInterval(()=>{const e=$('tpd');if(e)e.textContent=new Date().toLocaleString('fr-HT');},1000);setTimeout(updateBadges,500);
+}
+function rSb(){$('sbav').textContent=ini(CU.nom);$('sbnm').textContent=CU.nom;$('sbrl').textContent=CU.role==='superadmin'?'Super Admin':'Kasye';}
+const TTLS={dashboard:'Dashboard',transaction:'Nouvo Tranzaksyon',journal:'Jounal Mwen',profile:'Pwofil & Sekirite',msgs:'Notifikasyon Mwen','adm-users':'Jere Itilizatè','adm-bal':'Distribiye Kapital','adm-journal':'Tout Journal','adm-msgs':'Anons & Mesaj'};
+function nav(p){CP=p;closeSidebar();document.querySelectorAll('.sb-item').forEach(b=>b.classList.toggle('active',b.dataset.id===p));$('tpt').textContent=TTLS[p]||p;$('cnt').innerHTML=`<div style="display:flex;justify-content:center;padding:4rem"><div class="spin" style="width:28px;height:28px;border-color:rgba(13,27,42,.15);border-top-color:var(--navy)"></div></div>`;rPage(p);}
+async function rPage(p){
+  let h='';
+  if(p==='dashboard')h=await pgDash();
+  else if(p==='transaction')h=pgTx();
+  else if(p==='journal')h=await pgJ(false);
+  else if(p==='profile')h=pgProf();
+  else if(p==='adm-users')h=await pgUsers();
+  else if(p==='adm-bal')h=await pgBal();
+  else if(p==='adm-journal')h=await pgJ(true);
+  else if(p==='adm-msgs')h=await pgAdmMsgs();
+  else if(p==='msgs')h=await pgMsgs();
+  $('cnt').innerHTML=`<div class="fade-in">${h}</div>`;
+  if(p==='transaction')txC();
+  if(p==='journal'||p==='adm-journal')JP=1;
+}
+async function pgDash(){
+  const[st,me]=await Promise.all([rq('GET','/transactions/stats'),rq('GET','/auth/me')]);
+  if(me.ok)CU=me.user;const s=st.stats||{};const isA=CU.role==='superadmin';
+  const bal=CU.bal||{moncash:0,natcash:0};let bM=bal.moncash,bN=bal.natcash;
+  if(isA){const ud=await rq('GET','/users');if(ud.ok){bM=ud.users.reduce((s,u)=>s+(u.bal?.moncash||0),0);bN=ud.users.reduce((s,u)=>s+(u.bal?.natcash||0),0);}}
+  const tx=await rq('GET','/transactions?limit=8');const txs=tx.transactions||[];
+  return`<div class="sg">
+    <div class="sc" style="border-top:3px solid var(--y)"><div class="sc-l">Tranzaksyon Jodi a</div><div class="sc-v" style="color:var(--navy)">${s.today||0}</div><div class="sc-s">${isA?'Total sistèm':'Pa mwen'}</div></div>
+    <div class="sc" style="border-top:3px solid #6366F1"><div class="sc-l">Volume Total</div><div class="sc-v" style="font-size:1.1rem;color:#6366F1">${fmt(s.volume)}</div><div class="sc-s">HTG total</div></div>
+    <div class="sc" style="border-top:3px solid var(--green)"><div class="sc-l">Frè Kolekte</div><div class="sc-v" style="font-size:1.1rem;color:var(--green)">${fmt(s.fees)}</div><div class="sc-s">HTG frè</div></div>
+    <div class="sc" style="border-top:3px solid #F97316"><div class="sc-l">Total Tranzaksyon</div><div class="sc-v" style="color:#F97316">${s.total||0}</div><div class="sc-s">Depi kòmansman</div></div>
+  </div>
+  <div class="bg">
+    <div style="border-radius:var(--r);padding:1.8rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(200,0,13,.25);background:linear-gradient(135deg,#6B0000 0%,#B00010 40%,#E8000D 100%)">
+      <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
+      <div style="position:absolute;bottom:-40px;left:20%;width:180px;height:100px;border-radius:50%;background:rgba(255,255,255,.05)"></div>
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.5rem">MONCASH</div>
+      <div style="font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1;margin-bottom:.3rem">${fmt(bM)}</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.45)">${isA?'Total sistèm':'Kapital mwen'} — HTG</div>
+      <div style="position:absolute;top:1.2rem;right:1.4rem;font-family:'Syne',sans-serif;font-size:.75rem;font-weight:800;color:rgba(255,255,255,.2);letter-spacing:.06em">${isA?'ADMIN VIEW':'MON KAPITAL'}</div>
+    </div>
+    <div style="border-radius:var(--r);padding:1.8rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(0,50,180,.25);background:linear-gradient(135deg,#001F6B 0%,#003FCC 40%,#2B7FFF 100%)">
+      <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
+      <div style="position:absolute;bottom:-40px;left:20%;width:180px;height:100px;border-radius:50%;background:rgba(255,255,255,.05)"></div>
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.5rem">NATCASH</div>
+      <div style="font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1;margin-bottom:.3rem">${fmt(bN)}</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.45)">${isA?'Total sistèm':'Kapital mwen'} — HTG</div>
+      <div style="position:absolute;top:1.2rem;right:1.4rem;font-family:'Syne',sans-serif;font-size:.75rem;font-weight:800;color:rgba(255,255,255,.2);letter-spacing:.06em">${isA?'ADMIN VIEW':'MON KAPITAL'}</div>
+    </div>
+  </div>
+  <div class="card"><div class="sh"><div class="st">🗂 Dènye Tranzaksyon</div><button class="btn btn-h btn-sm" onclick="nav('${isA?'adm-journal':'journal'}')">Wè tout →</button></div><div class="tw"><table><thead><tr><th>Dat</th><th>Kliyan</th><th>N° Kliyan</th><th>Sèvis</th><th>Tip</th><th>Montan</th><th>Frè</th><th>Total</th><th>Kasye</th></tr></thead><tbody>${txs.length?txs.map(jr).join(''):er(9,'Pa gen tranzaksyon')}</tbody></table></div></div>`;
+}
+function pgTx(){const b=CU.bal||{moncash:0,natcash:0};return`<div class="card"><div class="card-t">➕ Nouvo Tranzaksyon</div><div class="ai">💡 Kapital ou — MonCash: <strong>${fmt(b.moncash)} HTG</strong> &nbsp;|&nbsp; NatCash: <strong>${fmt(b.natcash)} HTG</strong></div><div class="gr2"><div class="fg"><label class="flab">Non Kliyan</label><input class="fi" id="tn" placeholder="egz: Jean Baptiste"></div><div class="fg"><label class="flab">N° Kliyan</label><input class="fi" id="tno" placeholder="egz: 37570130"></div></div><div class="gr2"><div class="fg"><label class="flab">Sèvis</label><select class="fs" id="tsv" onchange="txC()"><option value="MonCash">💳 MonCash</option><option value="NatCash">💳 NatCash</option></select></div><div class="fg"><label class="flab">Tip Operasyon</label><select class="fs" id="tty" onchange="txC()"><option value="Depot">⬇ Dépôt</option><option value="Retrait">⬆ Retrait</option></select></div></div><div class="gr2"><div class="fg"><label class="flab">Montan (HTG)</label><input class="fi" id="tmt" type="number" min="0" placeholder="0.00" oninput="txC()"></div><div class="fg" id="fgfr"><label class="flab">Frè (HTG)</label><input class="fi" id="tfr" type="number" min="0" placeholder="0.00" oninput="txC()"></div></div><div class="fp" id="fp"><div class="fp-r"><span>Montan</span><span id="pm">—</span></div><div class="fp-r"><span>Frè</span><span id="pf">—</span></div><div class="fp-t"><span>Total Kliyan Peye</span><span id="pt">—</span></div></div><div style="margin-top:1.2rem"><button class="btn btn-n btn-fw" id="btnTx" style="font-size:.95rem;padding:.95rem;font-family:'Syne',sans-serif;font-weight:700" onclick="subTx()">✓ Valide &amp; Jenere Tiket</button></div></div>`;}
+function txC(){const ty=$('tty'),fg=$('fgfr'),fp=$('fp');if(!ty||!fg||!fp)return;const isR=ty.value==='Retrait';fg.style.opacity=isR?'1':'.35';fg.style.pointerEvents=isR?'auto':'none';if(!isR){const tf=$('tfr');if(tf)tf.value='';}const m=parseFloat($('tmt')?.value)||0;if(m>0){const fr=isR?(parseFloat($('tfr')?.value)||0):0;fp.style.display='block';$('pm').textContent=fmt(m)+' HTG';$('pf').textContent=fmt(fr)+' HTG';$('pt').textContent=fmt(isR?m+fr:m)+' HTG';}else fp.style.display='none';}
+async function subTx(){
+  const nom=$('tn').value.trim(),noc=$('tno').value.trim(),svc=$('tsv').value,typ=$('tty').value;
+  const mt=parseFloat($('tmt').value)||0,fr=typ==='Retrait'?(parseFloat($('tfr').value)||0):0;
+  if(!nom){toast('Antre non kliyan an','error');return;}if(!noc){toast('Antre nimewo kliyan an','error');return;}if(mt<=0){toast('Montan an dwe >0','error');return;}
+  const b=$('btnTx');b.disabled=true;b.innerHTML='<span class="spin"></span> Anrejistreman...';
+  const d=await rq('POST','/transactions',{nomClient:nom,noClient:noc,service:svc,type:typ,montant:mt,frais:fr});
+  b.disabled=false;b.innerHTML='✓ Valide &amp; Jenere Tiket';
+  if(!d.ok){toast(d.msg,'error');return;}
+  CU.bal=d.balances;toast('✓ Tranzaksyon anrejistre','success');showTk(d.transaction);
+}
+function showTk(e){$('mods').innerHTML=`<div class="mo open"><div class="mbox" style="max-width:400px"><div class="mtit">🎫 Tiket Ofisyèl</div><div class="ticket"><div class="tk-h"><div class="tk-logo">KikCash</div><div class="tk-dt">${fD(e.createdAt)}</div></div>${[['Kliyan',e.nomClient],['N° Kliyan',e.noClient],['Sèvis',e.service],['Operasyon',e.type],['Montan',fmt(e.montant)+' HTG'],['Frè',fmt(e.frais)+' HTG'],['Kasye',e.kasye_nom]].map(([k,v])=>`<div class="tk-r"><span class="tk-k">${k}</span><span class="tk-v">${v}</span></div>`).join('')}<div class="tk-tot"><span style="font-size:.78rem;font-weight:700;color:var(--navy)">Total Kliyan Peye</span><span class="tk-tv">${fmt(e.total)} HTG</span></div><div style="text-align:center;margin-top:.8rem;font-size:.65rem;color:var(--muted)">Ref: ${e.ticket_id}</div></div><div class="macts"><button class="btn btn-h btn-fw" onclick="window.print()">🖨 Enprime</button><button class="btn btn-n btn-fw" onclick="cM();nav('transaction')">Nouvo Tranzaksyon</button></div></div></div>`;}
+function cM(){$('mods').innerHTML='';}
+function jr(j){return`<tr><td style="font-size:.73rem;color:var(--muted)">${fD(j.createdAt)}</td><td style="font-weight:600">${j.nomClient||'—'}</td><td style="color:var(--muted);font-size:.8rem">${j.noClient||'—'}</td><td><span class="badge ${j.service==='MonCash'?'bmc':'bnc'}">${j.service}</span></td><td><span class="badge ${j.type==='Depot'?'bdep':'bret'}">${j.type}</span></td><td style="font-weight:600">${fmt(j.montant)}</td><td style="color:var(--muted)">${fmt(j.frais||0)}</td><td style="font-weight:700;color:var(--navy)">${fmt(j.total)}</td><td style="color:var(--muted);font-size:.78rem">${j.kasye_nom||'—'}</td></tr>`;}
+function er(c,m){return`<tr><td colspan="${c}"><div class="es"><div class="ei">📭</div>${m}</div></td></tr>`;}
+let JP=1;
+async function pgJ(isA){const d=await rq('GET','/transactions?limit=15');const txs=d.transactions||[];const pg=d.pagination||{};return`<div class="card"><div class="sh"><div class="st">📋 Journal Tranzaksyon</div><button class="btn btn-h btn-sm" onclick="expC()">📥 CSV</button></div><div class="fb"><input class="fi2" id="fs" placeholder="🔍 Chèche..." oninput="fJ()" style="flex:1;min-width:160px"><select class="fi2" id="fsv" onchange="fJ()"><option value="">Tout Sèvis</option><option value="MonCash">MonCash</option><option value="NatCash">NatCash</option></select><select class="fi2" id="fty" onchange="fJ()"><option value="">Tout Tip</option><option value="Depot">Dépôt</option><option value="Retrait">Retrait</option></select><input class="fi2" id="fdt" type="date" onchange="fJ()"></div><div class="tw"><table><thead><tr><th>Dat</th><th>Kliyan</th><th>N° Kliyan</th><th>Sèvis</th><th>Tip</th><th>Montan</th><th>Frè</th><th>Total</th><th>Kasye</th></tr></thead><tbody id="jtb">${txs.length?txs.map(jr).join(''):er(9,'Pa gen tranzaksyon')}</tbody></table></div><div id="jpg" class="pag">${pg.pages>1?[...Array(pg.pages)].map((_,i)=>`<button class="pb ${i===0?'active':''}" onclick="gP(${i+1})">${i+1}</button>`).join(''):''}</div></div>`;}
+async function fJ(){const s=$('fs')?.value||'',sv=$('fsv')?.value||'',ty=$('fty')?.value||'',dt=$('fdt')?.value||'';let q=`?page=${JP}&limit=15`;if(s)q+=`&search=${encodeURIComponent(s)}`;if(sv)q+=`&service=${sv}`;if(ty)q+=`&type=${ty}`;if(dt)q+=`&date=${dt}`;const d=await rq('GET','/transactions'+q);const txs=d.transactions||[];const pg=d.pagination||{};const tb=$('jtb');if(tb)tb.innerHTML=txs.length?txs.map(jr).join(''):er(9,'Pa gen rezilta');const pe=$('jpg');if(pe)pe.innerHTML=pg.pages>1?[...Array(pg.pages)].map((_,i)=>`<button class="pb ${i+1===JP?'active':''}" onclick="gP(${i+1})">${i+1}</button>`).join(''):'';}
+function gP(n){JP=n;fJ();}
+async function expC(){
+  const token=AUTH_TOKEN;
+  try{
+    const r=await fetch(API+'/transactions/export',{headers:{Authorization:'Bearer '+token}});
+    if(!r.ok){toast('Export la pa disponib','error');return;}
+    const blob=await r.blob(),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=`kikcash-${Date.now()}.csv`;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+  }catch{toast('Sèvè pa reponn pandan export la','error');}
+}
+function pgProf(){
+  const b=CU.bal||{moncash:0,natcash:0};
+  const isA=CU.role==='superadmin';
+  return`
+  <!-- Pwofil card -->
+  <div class="card" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);border:none;color:#fff;margin-bottom:1.5rem">
+    <div style="display:flex;align-items:center;gap:1.2rem;margin-bottom:1.5rem">
+      <div style="width:64px;height:64px;border-radius:18px;background:var(--yg);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:var(--navy);flex-shrink:0">${ini(CU.nom)}</div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:#fff">${CU.nom}</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.2rem">@${CU.username}</div>
+        <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(245,197,24,.15);border:1px solid rgba(245,197,24,.3);border-radius:100px;padding:.2rem .75rem;font-size:.65rem;font-weight:700;color:var(--y);margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase">${isA?'👑 Super Admin':'👤 Kasye'}</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:1rem">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.4rem">MonCash</div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:#fff">${fmt(b.moncash)}</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4)">HTG disponib</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:1rem">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.4rem">NatCash</div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:#fff">${fmt(b.natcash)}</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.4)">HTG disponib</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chanje non sèlman pou admin -->
+  ${isA?`
+  <div class="card">
+    <div class="card-t">✏️ Modifye Pwofil</div>
+    <div class="gr2" style="margin-bottom:.85rem">
+      <div class="fg"><label class="flab">Non Konplè</label><input class="fi" id="pn" value="${CU.nom}"></div>
+      <div class="fg"><label class="flab">Non Itilizatè</label><input class="fi" id="pu" value="${CU.username}"></div>
+    </div>
+    <button class="btn btn-n" onclick="savP()">💾 Sove Chanjman</button>
+  </div>
+  <div class="card">
+    <div class="card-t">🔒 Chanje Modpas</div>
+    <div class="gr3" style="margin-bottom:.85rem">
+      <div class="fg"><label class="flab">Modpas Aktyèl</label><input class="fi" id="po" type="password" placeholder="••••••••"></div>
+      <div class="fg"><label class="flab">Nouvo Modpas</label><input class="fi" id="pnw" type="password" placeholder="••••••••"></div>
+      <div class="fg"><label class="flab">Konfime Nouvo</label><input class="fi" id="pc" type="password" placeholder="••••••••"></div>
+    </div>
+    <button class="btn btn-n" onclick="chgP()">🔑 Chanje Modpas</button>
+  </div>`:`
+  <div class="card" style="border:1.5px dashed var(--border2)">
+    <div style="display:flex;align-items:center;gap:.8rem;color:var(--muted)">
+      <span style="font-size:1.5rem">🔒</span>
+      <div>
+        <div style="font-weight:600;color:var(--text);font-size:.88rem">Modpas & Pwofil</div>
+        <div style="font-size:.78rem;margin-top:.2rem">Kontakte admin ou pou chanje modpas ou.</div>
+      </div>
+    </div>
+  </div>`}
+  `;
+}
+async function savP(){const nom=$('pn').value.trim(),username=$('pu').value.trim();if(!nom||!username){toast('Ranpli tout chan yo','error');return;}const d=await rq('PATCH','/auth/profile',{nom,username});if(!d.ok){toast(d.msg,'error');return;}CU=d.user;rSb();toast('Pwofil aktyalize','success');}
+async function chgP(){const oldPassword=$('po').value,newPassword=$('pnw').value,conf=$('pc').value;if(!oldPassword||!newPassword||!conf){toast('Ranpli tout chan yo','error');return;}if(newPassword!==conf){toast('Nouvo modpas yo pa matche','error');return;}const d=await rq('PATCH','/auth/password',{oldPassword,newPassword});if(!d.ok){toast(d.msg,'error');return;}toast('Modpas chanje avèk siksè','success');$('po').value='';$('pnw').value='';$('pc').value='';}
+async function pgUsers(){
+  const d=await rq('GET','/users');const us=d.users||[];
+  return`<div class="card"><div class="card-t">👥 Jere Itilizatè</div>
+  <div class="sub-box"><div class="sub-t">➕ Kreye Nouvo Kont</div>
+  <div class="gr3">
+    <div class="fg"><label class="flab">Non Itilizatè</label><input class="fi" id="nu" placeholder="egz: bredias"></div>
+    <div class="fg"><label class="flab">Non Konplè</label><input class="fi" id="nn" placeholder="egz: Jean Baptiste"></div>
+    <div class="fg"><label class="flab">Modpas</label>
+      <div style="position:relative">
+        <input class="fi" id="np" type="password" placeholder="••••••••" style="padding-right:2.5rem">
+        <button onclick="tglPw('np',this)" type="button" style="position:absolute;right:.7rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);font-size:.85rem">👁</button>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom:.85rem"><div class="fg" style="max-width:220px"><label class="flab">Rôl</label><select class="fs" id="nr"><option value="user">Kasye</option><option value="superadmin">Admin</option></select></div></div>
+  <button class="btn btn-n" onclick="crU()">➕ Kreye Kont</button></div>
+  <div class="tw"><table><thead><tr><th>Non Konplè</th><th>Non Itilizatè</th><th>Rôl</th><th>Aksè</th><th>MonCash</th><th>NatCash</th><th>Aksyon</th></tr></thead>
+  <tbody>${us.map(u=>{
+    const b=u.bal||{moncash:0,natcash:0};
+    const pw=null;
+    return`<tr>
+    <td style="font-weight:600">${u.nom}</td>
+    <td style="color:var(--muted)">${u.username}</td>
+    <td><span class="badge ${u.role==='superadmin'?'badm':'busr'}">${u.role==='superadmin'?'👑 Admin':'Kasye'}</span></td>
+    <td><span style="font-size:.72rem;color:var(--muted)">Pa estoke</span></td>
+    <td><span class="ch mc">${fmt(b.moncash)} HTG</span></td>
+    <td><span class="ch nc">${fmt(b.natcash)} HTG</span></td>
+    <td style="display:flex;gap:.4rem;flex-wrap:wrap">
+      ${u.username!=='superadmin'
+        ?`<button class="btn btn-h btn-sm" onclick="resetUserPw('${u._id}','${u.nom}')">🔑 Reset modpas</button>
+           <button class="btn btn-r btn-sm" onclick="dlU('${u._id}','${u.nom}')">Efase</button>`
+        :'<span style="font-size:.72rem;color:var(--muted)">Pwoteje</span>'}
+    </td></tr>`;
+  }).join('')}</tbody></table></div></div>`;
+}
+function tglPw(id,btn){const el=$(id);el.type=el.type==='password'?'text':'password';btn.textContent=el.type==='password'?'👁':'🙈';}
+function tglBlur(id,btn){const el=$(id);const isBlurred=el.style.filter.includes('blur');el.style.filter=isBlurred?'none':'blur(4px)';btn.textContent=isBlurred?'🙈':'👁';}
+function cpTxt(t){navigator.clipboard.writeText(t).then(()=>toast('Kopye!','success'));}
+function showCreds(nom,username,pw){
+  $('mods').innerHTML=`<div class="mo open"><div class="mbox" style="max-width:400px">
+  <div class="mtit">📤 Enfòmasyon Koneksyon</div>
+  <div style="background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.2rem;margin-bottom:1rem">
+    <div style="font-size:.7rem;color:var(--muted);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem">Pataje ak ${nom}</div>
+    <div style="display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.84rem"><span style="color:var(--muted)">Non Itilizatè</span><strong>${username}</strong></div>
+    <div style="display:flex;justify-content:space-between;padding:.5rem 0;font-size:.84rem"><span style="color:var(--muted)">Modpas</span><strong>${pw||'(Pa disponib)'}</strong></div>
+  </div>
+  <button class="btn btn-n btn-fw" style="margin-bottom:.6rem" onclick="cpCreds('${username}','${pw}')">📋 Kopye Tout Enfòmasyon</button>
+  <div class="macts"><button class="btn btn-h btn-fw" onclick="cM()">Fèmen</button></div>
+  </div></div>`;
+}
+function cpCreds(u,p){navigator.clipboard.writeText(`KikCash - Enfòmasyon Koneksyon\nNon Itilizatè: ${u}\nModpas: ${p}\nURL: ouvri fichye HTML la`).then(()=>toast('Tout enfòmasyon kopye!','success'));}
+async function crU(){
+  const username=$('nu').value.trim(),nom=$('nn').value.trim(),password=$('np').value,role=$('nr').value;
+  if(!username||!nom||!password){toast('Ranpli tout chan yo','error');return;}
+  const d=await rq('POST','/users',{username,nom,password,role});
+  if(!d.ok){toast(d.msg,'error');return;}
+  toast(`Kont "${nom}" kreye avèk siksè`,'success');
+  // Montre modal ak enfòmasyon koneksyon
+  $('mods').innerHTML=`<div class="mo open"><div class="mbox" style="max-width:400px">
+  <div class="mtit">✅ Kont Kreye!</div>
+  <div style="background:var(--greenl);border:1.5px solid rgba(5,150,105,.2);border-radius:var(--r2);padding:1.2rem;margin-bottom:1rem">
+    <div style="font-size:.7rem;color:var(--green);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem">Enfòmasyon Koneksyon — Pataje ak ${nom}</div>
+    <div style="display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(5,150,105,.15);font-size:.88rem"><span style="color:var(--muted)">Non Konplè</span><strong>${nom}</strong></div>
+    <div style="display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(5,150,105,.15);font-size:.88rem"><span style="color:var(--muted)">Non Itilizatè</span><strong>${username}</strong></div>
+    <div style="display:flex;justify-content:space-between;padding:.5rem 0;font-size:.88rem"><span style="color:var(--muted)">Modpas</span><strong style="color:var(--navy);font-size:1rem">${password}</strong></div>
+  </div>
+  <button class="btn btn-n btn-fw" style="margin-bottom:.6rem" onclick="cpCreds('${username}','${password}')">📋 Kopye Enfòmasyon</button>
+  <div class="macts"><button class="btn btn-h btn-fw" onclick="cM();nav('adm-users')">OK, Konprann</button></div>
+  </div></div>`;
+}
+async function dlU(id,nom){if(!confirm(`Efase kont "${nom}" ?`))return;const d=await rq('DELETE','/users/'+id);if(!d.ok){toast(d.msg,'error');return;}toast(`"${nom}" efase`,'info');nav('adm-users');}
+async function resetUserPw(id,nom){
+  $('mods').innerHTML=`<div class="mo open"><div class="mbox" style="max-width:420px"><div class="mtit">🔑 Reset Modpas</div><div class="ai">Mete yon nouvo modpas tanporè pou <strong>${nom}</strong>. Modpas la ap parèt sèlman kounye a.</div><div class="fg"><label class="flab">Nouvo Modpas</label><input class="fi" id="reset-pw" type="password" placeholder="Omwen 4 karaktè"></div><div class="macts"><button class="btn btn-h btn-fw" onclick="cM()">Anile</button><button class="btn btn-n btn-fw" onclick="confirmResetPw('${id}','${nom}')">✓ Konfime</button></div></div></div>`;
+  $('reset-pw').focus();
+}
+async function confirmResetPw(id,nom){
+  const newPassword=$('reset-pw').value;
+  if(newPassword.length<4){toast('Modpas la dwe gen omwen 4 karaktè','error');return;}
+  const d=await rq('PATCH','/users/'+id+'/password',{newPassword});
+  if(!d.ok){toast(d.msg||'Modpas la pa ka chanje','error');return;}
+  cM();
+  toast(`Modpas ${nom} reset. Pataje nouvo modpas la an prive.`,'success');
+}
+async function pgBal(){const[ud,ad]=await Promise.all([rq('GET','/users'),rq('GET','/users/adjustments/all')]);const us=ud.users||[];const adjs=ad.adjustments||[];return`<div class="card"><div class="card-t">⚖️ Distribiye Kapital pa Kasye</div><div class="ai">👆 Klike <strong>Ajiste</strong> pou bay oswa retire kapital. Lajan an toujou rete nan men admin — kasye yo jis gen <strong>aksè pou opere</strong> montan sa.</div><div style="margin-top:1rem">${us.map(u=>{const b=u.bal||{moncash:0,natcash:0};return`<div class="ubr"><div class="ubi"><div class="ubav">${ini(u.nom)}</div><div><div class="ubn">${u.nom}</div><div class="ubu">@${u.username}</div></div></div><div class="ubb"><span class="ch mc">MC: ${fmt(b.moncash)}</span><span class="ch nc">NC: ${fmt(b.natcash)}</span><button class="btn btn-y btn-sm" onclick="opA('${u._id}','${u.nom}',${b.moncash},${b.natcash})">Ajiste</button></div></div>`;}).join('')}</div></div><div class="card"><div class="st" style="margin-bottom:1.3rem">📥 Istwa Ajisteman</div><div class="tw"><table><thead><tr><th>Dat</th><th>Kasye</th><th>Sèvis</th><th>Montan</th><th>Avan</th><th>Apre</th><th>Admin</th></tr></thead><tbody>${adjs.length?adjs.map(a=>`<tr><td style="font-size:.73rem;color:var(--muted)">${fD(a.createdAt)}</td><td style="font-weight:600">${a.target_nom}</td><td><span class="badge ${a.service==='MonCash'?'bmc':'bnc'}">${a.service}</span></td><td style="font-weight:700;color:${a.montant>0?'var(--green)':'var(--red)'}">${a.montant>0?'+':''}${fmt(a.montant)} HTG</td><td style="color:var(--muted)">${fmt(a.bal_avant)}</td><td style="font-weight:600">${fmt(a.bal_apre)}</td><td style="color:var(--muted);font-size:.78rem">${a.admin_nom}</td></tr>`).join(''):er(7,'Pa gen ajisteman')}</tbody></table></div></div>`;}
+function opA(uid,nom,mc,nc){$('mods').innerHTML=`<div class="mo open"><div class="mbox" style="max-width:440px"><div class="mtit">⚖️ Ajiste Kapital — ${nom}</div><div class="ai" style="margin-bottom:1.2rem">Kapital aktyèl: <strong>MC: ${fmt(mc)} HTG</strong> &nbsp;|&nbsp; <strong>NC: ${fmt(nc)} HTG</strong></div><div class="gr2" style="margin-bottom:.85rem"><div class="fg"><label class="flab">Sèvis</label><select class="fs" id="as"><option value="MonCash">MonCash</option><option value="NatCash">NatCash</option></select></div><div class="fg"><label class="flab">Montan HTG (+/-)</label><input class="fi" id="am" type="number" placeholder="50000 oswa -10000"></div></div><div class="fg" style="margin-bottom:1rem"><label class="flab">Nòt (opsyonèl)</label><input class="fi" id="an" placeholder="Rezon ajisteman an..."></div><div class="macts"><button class="btn btn-h btn-fw" onclick="cM()">Anile</button><button class="btn btn-n btn-fw" id="btnA" onclick="apA('${uid}','${nom}')">✓ Aplike</button></div></div></div>`;}
+async function apA(uid,nom){const service=$('as').value,montant=parseFloat($('am').value)||0,note=$('an').value;if(montant===0){toast('Antre yon montan ki pa zewo','error');return;}const b=$('btnA');b.disabled=true;b.innerHTML='<span class="spin"></span>';const d=await rq('PATCH','/users/'+uid+'/balance',{service,montant,note});b.disabled=false;b.innerHTML='✓ Aplike';if(!d.ok){toast(d.msg,'error');return;}toast(`${service} pou "${nom}": ${montant>0?'+':''}${fmt(montant)} HTG`,'success');cM();nav('adm-bal');}
+function toggleSidebar(){
+  const sb=document.querySelector('.sidebar');
+  const ovl=$('mobOvl');
+  const isOpen=sb.classList.contains('open');
+  if(isOpen){closeSidebar();}
+  else{sb.classList.add('open');ovl.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closeSidebar(){
+  const sb=document.querySelector('.sidebar');
+  const ovl=$('mobOvl');
+  sb.classList.remove('open');
+  ovl.classList.remove('open');
+  document.body.style.overflow='';
+}
+// Close sidebar on nav click (mobile)
+
+// ══════════════════════════════════
+// MESSAGING SYSTEM (Supabase)
+// ══════════════════════════════════
+async function getMsgs(){const d=await rq('GET','/messages');return d.ok?d.messages||[]:[];}
+
+async function getUnreadCount(userId){
+  const msgs=await getMsgs();
+  return msgs.filter(m=>!m.readBy?.includes(userId)).length;
+}
+
+async function updateBadges(){
+  if(!CU)return;
+  const isA=CU.role==='superadmin';
+  let count=0;
+  if(isA){
+    // Admin wè mesaj yo voye — pa bezwen badge
+    count=0;
+  } else {
+    count=await getUnreadCount(CU._id);
+  }
+  // Update bell
+  const bell=$('bell-badge');
+  if(bell){bell.style.display=count>0?'flex':'none';bell.textContent=count>99?'99+':count;}
+  // Update sidebar badge
+  const nb=$('nb_msgs')||$('nb_adm-msgs');
+  if(nb){nb.style.display=count>0?'flex':'none';nb.textContent=count;}
+}
+
+// Admin page — compose + see all messages
+async function pgAdmMsgs(){
+  const usersRes=await rq('GET','/users');
+  const users=(usersRes.users||[]).filter(u=>u.username!=='superadmin');
+  const msgs=(await getMsgs()).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+  
+  const userOpts=users.map(u=>`<option value="${u._id}">${u.nom} (@${u.username})</option>`).join('');
+  
+  return`
+  <div class="compose-box">
+    <div class="compose-t">📢 Kreye Anons oswa Mesaj Prive</div>
+    <div class="gr2" style="margin-bottom:.85rem">
+      <div class="fg">
+        <label class="flab" style="color:rgba(255,255,255,.5)">Destinatè</label>
+        <select class="fs" id="msg-to">
+          <option value="all">📢 Tout Itilizatè</option>
+          ${userOpts}
+        </select>
+      </div>
+      <div class="fg">
+        <label class="flab" style="color:rgba(255,255,255,.5)">Sijè</label>
+        <input class="fi" id="msg-subj" placeholder="Sijè mesaj la...">
+      </div>
+    </div>
+    <div class="fg" style="margin-bottom:1rem">
+      <label class="flab" style="color:rgba(255,255,255,.5)">Mesaj</label>
+      <textarea class="fi" id="msg-body" rows="4" placeholder="Tape mesaj ou isit..." style="resize:vertical;line-height:1.6"></textarea>
+    </div>
+    <div style="display:flex;gap:.75rem">
+      <button class="btn btn-y" onclick="sendMsg()" id="btn-send" style="font-family:'Syne',sans-serif;font-weight:700;padding:.8rem 2rem">📤 Voye Mesaj</button>
+      <div id="send-confirm" style="display:none;align-items:center;gap:.4rem;color:var(--y);font-size:.82rem;font-weight:600">✓ Mesaj voye!</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sh">
+      <div class="st">📬 Mesaj Voye (${msgs.length})</div>
+      ${msgs.length?`<button class="btn btn-r btn-sm" onclick="delAllMsgs()">🗑 Efase Tout</button>`:''}
+    </div>
+    ${msgs.length?msgs.map(m=>{
+      const toLabel=m.to==='all'?'📢 Tout Itilizatè':`👤 ${m.toName}`;
+      const readCount=m.readBy?.length||0;
+      return`<div class="msg-card">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem">
+          <div style="flex:1">
+            <div class="msg-title">${m.subj}</div>
+            <div class="msg-body" style="margin-top:.4rem">${m.body}</div>
+          </div>
+          <div style="flex-shrink:0;text-align:right">
+            <div style="font-size:.7rem;font-weight:700;color:var(--y);background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.2);border-radius:6px;padding:.2rem .6rem;margin-bottom:.4rem">${toLabel}</div>
+            <div style="font-size:.65rem;color:var(--muted)">${new Date(m.ts).toLocaleString('fr-HT')}</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--border)">
+          <span style="font-size:.7rem;color:var(--green)">✓ ${readCount} moun li li</span>
+          <button class="btn btn-r btn-sm" style="margin-left:auto" onclick="delMsg('${m.id}')">🗑</button>
+        </div>
+      </div>`;
+    }).join(''):`<div class="msg-empty"><div class="ei">📭</div>Pa gen mesaj voye ankò</div>`}
+  </div>`;
+}
+
+async function sendMsg(){
+  const to=$('msg-to').value;
+  const toName=$('msg-to').selectedOptions[0].text;
+  const subj=$('msg-subj').value.trim();
+  const body=$('msg-body').value.trim();
+  if(!subj){toast('Antre sijè mesaj la','error');return;}
+  if(!body){toast('Ekri mesaj la','error');return;}
+  
+  const result=await rq('POST','/messages',{to,toName,subj,body});
+  if(!result.ok){toast(result.msg||'Mesaj la pa ka voye','error');return;}
+  
+  $('msg-subj').value='';$('msg-body').value='';
+  const conf=$('send-confirm');conf.style.display='flex';
+  setTimeout(()=>conf.style.display='none',3000);
+  toast(`Mesaj voye bay ${toName}`,'success');
+}
+
+async function delMsg(id){
+  const result=await rq('DELETE','/messages/'+id);
+  if(!result.ok){toast(result.msg||'Mesaj la pa ka efase','error');return;}
+  nav('adm-msgs');
+}
+async function delAllMsgs(){
+  if(!confirm('Efase tout mesaj?'))return;
+  const result=await rq('DELETE','/messages');
+  if(!result.ok){toast(result.msg||'Mesaj yo pa ka efase','error');return;}
+  nav('adm-msgs');
+}
+
+// User page — see their messages
+async function pgMsgs(){
+  const msgs=(await getMsgs()).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+  
+  // Mark all as read
+  await Promise.all(msgs.filter(m=>!m.readBy?.includes(CU._id)).map(m=>rq('PATCH','/messages/'+m.id+'/read')));
+  setTimeout(updateBadges,200);
+  
+  const unread=msgs.filter(m=>!m.readBy?.includes(CU._id));
+  
+  return`
+  <div class="card" style="background:linear-gradient(135deg,var(--navy),var(--navy2));border:none;margin-bottom:1.5rem">
+    <div style="display:flex;align-items:center;gap:1rem">
+      <div style="font-size:2.5rem">🔔</div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:#fff">Notifikasyon Ou</div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.5);margin-top:.2rem">${msgs.length} mesaj total${unread.length>0?` &nbsp;·&nbsp; <span style="color:var(--y);font-weight:700">${unread.length} nouvo</span>`:' &nbsp;·&nbsp; tout li'}</div>
+      </div>
+    </div>
+  </div>
+  
+  ${msgs.length?msgs.map(m=>{
+    const wasUnread=!m.readBy?.includes(CU._id);
+    return`<div class="msg-card ${wasUnread?'unread':''}">
+      <div style="display:flex;align-items:flex-start;gap:.75rem">
+        ${wasUnread?'<div class="msg-dot" style="margin-top:.35rem;flex-shrink:0"></div>':'<div style="width:8px;flex-shrink:0"></div>'}
+        <div style="flex:1">
+          <div class="msg-title">${m.subj}</div>
+          <div class="msg-body">${m.body}</div>
+          <div class="msg-meta">
+            <span class="msg-from">✉️ ${m.fromName}</span>
+            <span class="msg-date">${new Date(m.ts).toLocaleString('fr-HT')}</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join(''):`<div class="msg-empty"><div class="ei">🔕</div>Pa gen notifikasyon pou ou ankò</div>`}`;
+}
+
+// Check badges every 30 seconds
+setInterval(updateBadges, 30000);
+
+autoLogin();
+</script>
+</body>
+</html>
